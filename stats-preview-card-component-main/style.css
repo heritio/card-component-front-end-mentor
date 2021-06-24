@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet:hsl(277, 64%, 61%);
+    --main-paragraph:  rgb(204, 203, 203);
+    --white-text: hsl(0, 0%, 100%);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+    --font-family-inter: 'Inter', sans-serif;
+    --font-family-deca: 'Lexend Deca', sans-serif;
+  }
+
+body{
+    
+    background-color: var(--dark-blue);
+    color: white;
+    font-size: 15px;
+}
+.attribution{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#container{margin: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    border: 1px solid #000;
+ border-radius: 25px;
+
+}
+
+#container-img{
+  max-height: 100%;
+  background-image: url(./images/image-header-desktop.jpg);
+ 
+  filter: grayscale(100%) brightness(80%) sepia(80%) hue-rotate(-50deg) saturate(100%) contrast(0.8);
+   
+}
+
+#container-text{
+  background-color: var(--dark-desaturated-blue);
+  padding: 50px;
+}
+.insight{
+    color: var(--soft-violet);
+}
+
+.container-title{
+ color: var(--white-text);
+ font-family: var(--font-family-deca);
+ margin-bottom: 20px;
+ text-align: center;
+}
+
+.container-main-text{
+  color: var(--main-paragraph);
+  font-family: var(--font-family-inter);
+  text-align: center;
+}
+.container-footer-text{
+    display: flex;
+    justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: -30px;
+  font-family: var(--font-family-deca);
+}
+.container-footer-text-position{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.grey{
+    color: var(--main-paragraph)
+}
+.bold{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+   
+    #container{
+        display: flex;
+        flex-direction: column-reverse;
+       margin: auto;
+       height: 99vh;
+       padding: 50px 20px;
+    
+    }
+    #container-img{
+        flex: 1;
+       
+    }
+    #container-text{
+       flex: 1;
+    }
+
+    .container-footer-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
+
+    .container-footer-text-position{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    
+
+}
